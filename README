@@ -1,0 +1,6 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=16
+
+After a discussion of ways of setting the correct error format for various compilers on vim-dev, I threw together this script to allow you to do:
+:Compiler bcc55
+
+and have the errorformat for compiler be setup.  Currently it replaces the default errorformat, but is easily changed to be appended to the current value of errorformat.  Uses the :runtime command to search for a filename (this case, bcc55.vim) in a 'compiler' directory under one of the runtime directories.  Commonly, ~/.vim/compiler.
